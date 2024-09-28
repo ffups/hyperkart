@@ -20,4 +20,4 @@
 ### BACKEND
 
 - [ ] feat: make sure they are valid hyperisland names and emails that actually exist?
-- [ ] test push //jod
+- [ ] feat: confirmation emails when signing up.
