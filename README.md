@@ -10,3 +10,4 @@
 - [ ] fix: button icons not same size
 - [ ] feat: hover effect on buttons
 - [ ] feat: racing flag animation in background.
+- [ ] test push //jod
