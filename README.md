@@ -6,3 +6,4 @@
 - [ ] page: form for user to register
 - [ ] page: credits page? like: "made by [name], [name], [name] etc etc"
 - [ ] feat: music?
+- [ ] fix: button icons not same size

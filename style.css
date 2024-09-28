@@ -1,6 +1,26 @@
+@font-face {
+  font-family: "Shin Go Pro";
+  src: url("assets/fonts/ATTFShinGoProRegular.ttf");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Shin Go Pro";
+  src: url("assets/fonts/ATTFShinGoProMedium.ttf");
+  font-weight: medium;
+}
+
 :root {
   --bg-light-blue: #57bde3;
   --bg-dark-blue: #0a09ae;
+
+  --clr-gray-blue: #91c8f0;
+
+  --clr-neutral-800: #252525;
+  --clr-neutral-700: #4f4f4f;
+  --clr-neutral-100: #f6f6f6;
+
+  --shadow: 0px 6px 3px rgba(0, 0, 0, 0.5);
 }
 
 *,
@@ -12,9 +32,10 @@
 }
 
 .logo {
-  max-width: 100%;
+  max-width: min(100%, 400px);
   padding-inline: 1.5rem;
   margin-top: 1rem;
+  justify-self: center;
 }
 
 body {
@@ -26,6 +47,7 @@ body {
   );
   display: grid;
   grid-template-rows: max-content auto;
+  font-family: "Shin Go Pro", sans-serif;
 }
 
 h1 {
@@ -48,27 +70,93 @@ h1 {
 
 button {
   display: flex;
-  width: 100px;
   align-items: center;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--clr-neutral-100);
+  box-shadow: var(--shadow);
+  background: linear-gradient(
+    0deg,
+    var(--clr-neutral-800) 0%,
+    var(--clr-neutral-700) 100%
+  );
+  /* width: 100%; */
+  width: 120px;
+  & img {
+    max-width: 70px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .buttons {
-  /* border: 1px solid red; */
   display: flex;
   justify-content: space-between;
-  /* align-self: flex-end; */
-  /* justify-self: flex-end; */
-  /* place-self: flex-end; */
   margin-bottom: 1.5rem;
+  & button:first-child {
+    border-left: none;
+  }
+  & button:last-child {
+    border-right: none;
+    justify-content: flex-end;
+  }
+}
+
+h2 {
+  font-weight: medium;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid yellow; */
+  /* display: grid; */
+  /* grid-template-rows: auto max-content; */
+  gap: 1rem;
   .form-window {
-    background-color: gray;
-    flex-grow: 1;
-    margin: 1.5rem;
+    --inline-margin: 1.5rem;
+    background-color: var(--clr-gray-blue);
+    opacity: 0.75;
+    margin-inline: 1.5rem;
+    /* padding-inline: 1rem; */
+    /* flex-grow: 1; */
+    /* height: clamp(200px, 50%, 400px); */
+    /* height: 70%; */
+    height: min(70%, 500px);
+    border-radius: 0.5rem;
+    border: 1px solid var(--clr-neutral-700);
+    margin-top: auto;
+    outline: 3px solid var(--clr-gray-blue);
+    box-shadow: var(--shadow);
+    padding: 1rem;
+    padding-bottom: 2rem;
+    /* width: 100%; */
+    width: clamp(200px, calc(100% - (2 * var(--inline-margin))), 400px);
+    /* max-width: min(100%, 400px); */
+    /* justify-self: center; */
+    align-self: center;
+    & label {
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    & select {
+      font-family: inherit;
+      font-size: inherit;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      /* margin-bottom: 1rem; */
+    }
+    & input {
+      padding: 0.5rem;
+      font-size: inherit;
+      border-radius: 0.5rem;
+      border: 1px solid var(--clr-neutral-700);
+    }
+    margin-bottom: auto;
+    /* align-self: center; */
+    /* justify-self: center; */
   }
 }

@@ -12,6 +12,7 @@
     <!-- <h1>Hyper Island Mariokart Tournament</h1> -->
     <form action="/">
       <div class="form-window">
+        <h2>Register</h2>
         <label>
           Name
           <input type="text" required />
@@ -20,12 +21,15 @@
           E-mail
           <input type="email" required />
         </label>
-        <select name="level" id="level" required>
-          <option value="Choose" disabled selected>Skill Level</option>
-          <option value="Beginner">Beginner</option>
-          <option value="Intermediate">Intermediate</option>
-          <option value="Advanced">Advanced</option>
-        </select>
+        <label>
+          Skill Level
+          <select name="level" id="level" required>
+            <option value="" disabled selected>Choose</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+          </select>
+        </label>
       </div>
       <div class="buttons">
         <button>
