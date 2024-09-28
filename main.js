@@ -39,3 +39,8 @@ function affectParticles() {
     }
   });
 }
+
+const backButton = document.querySelector("button[type='reset']");
+backButton.addEventListener("click", () => {
+  window.location.href = "/index.html";
+});
