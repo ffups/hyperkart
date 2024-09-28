@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <img src="assets/logo.png" alt="Logo" class="logo" draggable="false" />
+    <!-- <h1>Hyper Island Mariokart Tournament</h1> -->
+    <form action="/">
+      <div class="form-window">
+        <label>
+          Name
+          <input type="text" required />
+        </label>
+        <label>
+          E-mail
+          <input type="email" required />
+        </label>
+        <select name="level" id="level" required>
+          <option value="Choose" disabled selected>Skill Level</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+      <div class="buttons">
+        <button>
+          <img src="assets/back.svg" alt="Back Button" />
+        </button>
+        <button>
+          <img src="assets/ok.svg" alt="Okay Button" />
+        </button>
+      </div>
+    </form>
+    <div class="particles-container"></div>
+  </body>
+</html>

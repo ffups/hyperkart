@@ -1,0 +1,74 @@
+:root {
+  --bg-light-blue: #57bde3;
+  --bg-dark-blue: #0a09ae;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.logo {
+  max-width: 100%;
+  padding-inline: 1.5rem;
+  margin-top: 1rem;
+}
+
+body {
+  min-height: 100dvh;
+  background: linear-gradient(
+    18deg,
+    rgba(10, 9, 174, 1) 0%,
+    rgba(87, 189, 227, 1) 100%
+  );
+  display: grid;
+  grid-template-rows: max-content auto;
+}
+
+h1 {
+  text-align: center;
+  margin-block-start: 1rem;
+}
+
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100dvh;
+}
+
+.particle {
+  border-radius: 100vw;
+  position: absolute;
+  z-index: -1;
+}
+
+button {
+  display: flex;
+  width: 100px;
+  align-items: center;
+}
+
+.buttons {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  /* align-self: flex-end; */
+  /* justify-self: flex-end; */
+  /* place-self: flex-end; */
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid yellow; */
+  .form-window {
+    background-color: gray;
+    flex-grow: 1;
+    margin: 1.5rem;
+  }
+}
