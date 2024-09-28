@@ -7,7 +7,7 @@
 - [ ] page: main landing page (info about event and "register" button)
 - [ ] page: form for user to register
 - [ ] page: connect form to database
-- [ ] page: credits page? like: "made by [name], [name], [name] etc etc"
+- [ ] page: meet the team, update team info, name, role, connection info, change text under header
 - [ ] page: rules for competition
 - [ ] feat: music?
 - [ ] fix: button icons not same size
