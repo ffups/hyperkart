@@ -13,10 +13,6 @@ function createParticles() {
   }
 }
 
-createParticles();
-setInterval(affectParticles, 33);
-setInterval(transformParticles, 1000);
-
 function transformParticles() {
   const particles = document.querySelectorAll(".particle");
   particles.forEach((particle) => {
@@ -40,7 +36,9 @@ function affectParticles() {
   });
 }
 
-const backButton = document.querySelector("button[type='reset']");
-backButton.addEventListener("click", () => {
-  window.location.href = "/index.html";
-});
+function renderParticles() {
+  createParticles();
+  setInterval(affectParticles, 33);
+  setInterval(transformParticles, 1000);
+}
+renderParticles();
