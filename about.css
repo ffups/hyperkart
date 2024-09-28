@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    border: 1px solid red;
+    border-radius: 10px;
+}
+
+.avatar {
+    width: 100%;
+    height: auto;
+    border-radius: 100px;
+    border: 8px solid yellow;
+}
+
+.avatar-description {
+    color: #ffffff;
+}

@@ -136,7 +136,7 @@ main {
   box-shadow: var(--shadow);
   padding: 1rem;
   padding-bottom: 2rem;
-  width: clamp(200px, calc(100% - (2 * var(--inline-margin))), 400px);
+  width: clamp(200px, calc(100% - (2 * var(--inline-margin))), 800px);
   align-self: center;
   margin-top: auto;
   margin-bottom: auto;
@@ -146,7 +146,7 @@ main {
   & a {
     justify-content: center;
   }
-}
+} 
 
 form {
   display: flex;
