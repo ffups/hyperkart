@@ -48,7 +48,7 @@ body {
   grid-template-rows: max-content auto max-content;
   /* gap: 1rem; */
   font-family: "Shin Go Pro", sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 img {
@@ -278,6 +278,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
+  /* background-color: red; */
+  width: 100vw;
   height: 100dvh;
 }
 
