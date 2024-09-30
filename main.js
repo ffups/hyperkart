@@ -86,23 +86,27 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
 });
 
 const okayButton = document.querySelector(".nav__button--okay");
-okayButton.addEventListener("click", function () {
-  // const form = document.getElementById("signupForm");
-  // if (form.checkValidity()) {
-  //   form.classList.add("disabled");
-  //   okayButton.classList.add("disabled");
-  // }
-});
-
+const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
-emailInput.addEventListener("input", (e) => {
-  console.log(e.target.value);
-  if (emailInput.value.includes("@hyperisland.se")) {
-    //   emailInput.setCustomValidity("");
-    console.log("valid");
-  }
 
-  // else {
-  //   emailInput.setCustomValidity("Email must end with @hyperisland.se");
-  // }
+function handleButtonAbility() {
+  const value = emailInput.value;
+  const emailMatch = "@hyperisland.se";
+  if (
+    value.slice(value.length - emailMatch.length) === emailMatch &&
+    value !== emailMatch &&
+    nameInput.value
+  ) {
+    okayButton.classList.remove("disabled");
+  } else {
+    if (!okayButton.classList.contains("disabled")) {
+      okayButton.classList.add("disabled");
+    }
+  }
+}
+
+document.querySelectorAll("input").forEach((i) => {
+  i.addEventListener("input", () => {
+    handleButtonAbility();
+  });
 });

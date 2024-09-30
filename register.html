@@ -19,7 +19,14 @@
           <h2>Register</h2>
           <label>
             Name / Nickname
-            <input type="text" id="name" name="name" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              aria-invalid="false"
+              placeholder=" "
+              required
+            />
           </label>
           <label>
             Hyper Island E-mail
@@ -29,6 +36,8 @@
               name="email"
               pattern=".+@hyperisland\.se$"
               title="Email must end with @hyperisland.se"
+              aria-invalid="false"
+              placeholder=" "
               required
             />
           </label>

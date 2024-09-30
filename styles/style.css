@@ -220,6 +220,12 @@ form .window {
     height: 2.5rem;
     border-radius: 0.5rem;
     border: 1px solid var(--clr-neutral-700);
+    &:not(:placeholder-shown):focus:invalid {
+      outline: none;
+    }
+    &:not(:placeholder-shown):invalid {
+      outline: 1px solid red;
+    }
   }
 }
 
