@@ -41,7 +41,9 @@ function renderParticles() {
   setInterval(affectParticles, 33);
   setInterval(transformParticles, 1000);
 }
-renderParticles();
+
+// renderParticles();
+
 document.getElementById('signupForm').addEventListener('submit', function(e) {
   e.preventDefault(); // Prevent form submission from refreshing the page
 
