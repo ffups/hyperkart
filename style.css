@@ -240,8 +240,10 @@ form .window {
     & img {
       max-width: 70px;
     }
-    &:hover {
+    &:hover,
+    &:focus {
       cursor: pointer;
+      outline: none;
       &::before {
         background: linear-gradient(
           var(--clr-neutral-600),
