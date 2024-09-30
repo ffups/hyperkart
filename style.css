@@ -285,6 +285,19 @@ form .window {
       transform-origin: bottom;
       box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.33);
     }
+    &[disabled] {
+      opacity: 0.5;
+      filter: grayscale();
+      &:hover {
+        cursor: not-allowed;
+        &::before {
+          background: linear-gradient(
+            var(--clr-neutral-700),
+            var(--clr-neutral-800)
+          );
+        }
+      }
+    }
   }
 }
 
