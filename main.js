@@ -48,11 +48,9 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
   // Collect the form data
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
-  const program = document.getElementById('program').value;
-  const level = document.getElementById('level').value;
 
   // Validate form data
-  if (!name || !email || !program || !level) {
+  if (!name || !email) {
       alert("Please fill in all fields.");
       return;
   }
@@ -61,8 +59,6 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
   const formData = new FormData();
   formData.append('name', name);
   formData.append('email', email);
-  formData.append('program', program);
-  formData.append('level', level);
 
   // Send data to Google Apps Script
   fetch('https://script.google.com/macros/s/AKfycbzQu7I-dy1mp7df-bzlPIoboIcvba9wq2yXSbTxq2WAOe2IKutZUcGaDKmAIxUxtYbv/exec', {
