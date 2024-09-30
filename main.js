@@ -42,3 +42,44 @@ function renderParticles() {
   setInterval(transformParticles, 1000);
 }
 renderParticles();
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent form submission from refreshing the page
+
+  // Collect the form data
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const program = document.getElementById('program').value;
+  const level = document.getElementById('level').value;
+
+  // Validate form data
+  if (!name || !email || !program || !level) {
+      alert("Please fill in all fields.");
+      return;
+  }
+
+  // Create form data object
+  const formData = new FormData();
+  formData.append('name', name);
+  formData.append('email', email);
+  formData.append('program', program);
+  formData.append('level', level);
+
+  // Send data to Google Apps Script
+  fetch('https://script.google.com/macros/s/AKfycbzQu7I-dy1mp7df-bzlPIoboIcvba9wq2yXSbTxq2WAOe2IKutZUcGaDKmAIxUxtYbv/exec', {
+      method: 'POST',
+      body: new URLSearchParams(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+      if (data.status === "success") {
+          alert("Sign-up successful!");
+          document.getElementById('signupForm').reset(); // Reset the form
+      } else {
+          alert("There was a problem with the sign-up. Please try again.");
+      }
+  })
+  .catch(error => {
+      console.error('Error:', error);
+      alert("Error submitting form. Please try again later.");
+  });
+});
