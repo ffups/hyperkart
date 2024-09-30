@@ -212,8 +212,7 @@ form .window {
     flex-direction: column;
     font-weight: bold;
   }
-  & select,
-  input {
+  & input {
     font-family: inherit;
     font-size: 1rem;
     padding-inline: 0.5rem;

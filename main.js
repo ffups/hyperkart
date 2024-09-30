@@ -84,3 +84,25 @@ document.getElementById("signupForm").addEventListener("submit", function (e) {
       alert("Error submitting form. Please try again later.");
     });
 });
+
+const okayButton = document.querySelector(".nav__button--okay");
+okayButton.addEventListener("click", function () {
+  // const form = document.getElementById("signupForm");
+  // if (form.checkValidity()) {
+  //   form.classList.add("disabled");
+  //   okayButton.classList.add("disabled");
+  // }
+});
+
+const emailInput = document.getElementById("email");
+emailInput.addEventListener("input", (e) => {
+  console.log(e.target.value);
+  if (emailInput.value.includes("@hyperisland.se")) {
+    //   emailInput.setCustomValidity("");
+    console.log("valid");
+  }
+
+  // else {
+  //   emailInput.setCustomValidity("Email must end with @hyperisland.se");
+  // }
+});
