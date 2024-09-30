@@ -223,7 +223,7 @@ form .window {
   }
 }
 
-.form__buttons {
+.nav__buttons {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -267,7 +267,7 @@ form .window {
       z-index: -1;
     }
   }
-  .form__button--back {
+  .nav__button--back {
     border-left: none;
     border-radius: 0 0.5rem 0.5rem 0;
     &::before {
@@ -276,7 +276,7 @@ form .window {
       box-shadow: -5px 5px 3px rgba(0, 0, 0, 0.33);
     }
   }
-  .form__button--okay {
+  .nav__button--okay {
     border-right: none;
     border-radius: 0.5rem 0 0 0.5rem;
     justify-content: flex-end;
