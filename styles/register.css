@@ -15,7 +15,6 @@ form .window {
     font-weight: bold;
   }
   & input {
-    font-family: inherit;
     font-size: 1rem;
     padding-inline: 0.5rem;
     height: 2.5rem;
