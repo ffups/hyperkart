@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Shin Go Pro";
-  src: url("assets/fonts/ATTFShinGoProRegular.ttf");
+  src: url("../assets/fonts/ATTFShinGoProRegular.ttf");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Shin Go Pro";
-  src: url("assets/fonts/ATTFShinGoProMedium.ttf");
+  src: url("../assets/fonts/ATTFShinGoProMedium.ttf");
   font-weight: medium;
 }
 
@@ -212,8 +212,7 @@ form .window {
     flex-direction: column;
     font-weight: bold;
   }
-  & select,
-  input {
+  & input {
     font-family: inherit;
     font-size: 1rem;
     padding-inline: 0.5rem;
