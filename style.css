@@ -16,6 +16,7 @@
   --bg-dark-blue: #0a09ae;
   --clr-neutral-800: #252525;
   --clr-neutral-700: #4f4f4f;
+  --clr-neutral-600: #6c6c6c;
   --clr-neutral-100: #f6f6f6;
 
   /* SHADOWS */
@@ -241,6 +242,12 @@ form .window {
     }
     &:hover {
       cursor: pointer;
+      &::before {
+        background: linear-gradient(
+          var(--clr-neutral-600),
+          var(--clr-neutral-700)
+        );
+      }
     }
     &::before {
       border: 2px solid var(--clr-neutral-100);
