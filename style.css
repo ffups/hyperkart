@@ -49,6 +49,7 @@ body {
   /* gap: 1rem; */
   font-family: "Shin Go Pro", sans-serif;
   /* overflow: hidden; */
+  /* overflow-x: hidden; */
 }
 
 img {
@@ -226,6 +227,7 @@ form .window {
   justify-content: space-between;
   width: 100%;
   z-index: 1;
+  overflow: hidden;
   & > * {
     position: relative;
     width: 120px;
