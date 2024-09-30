@@ -330,3 +330,9 @@ footer {
   z-index: -1;
   display: none;
 }
+
+/* UTILS --------------------------------------------------------------------- */
+
+.fs-small {
+  font-size: var(--fs-small);
+}

@@ -1,32 +1,34 @@
+a {
+  text-decoration: none;
+}
+
 .window {
   margin-bottom: auto;
-  width: min(calc(100% - 2rem), 400px);
 }
 
 .container {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
-
-  height: 100%;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  &:hover {
+    .avatar__image {
+      transform: scale(1.05);
+    }
+  }
 }
 
-.avatar {
+.avatar__image {
   width: 5rem;
-  height: auto;
+  transition: 200ms;
 }
 
-p {
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
+.avatar__name {
+  font-weight: bold;
 }
